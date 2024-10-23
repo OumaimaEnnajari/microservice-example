@@ -33,4 +33,10 @@ spring:
               - Path=/ACCOUNT-SERVICE/**
             filters:
               - StripPrefix=1
+          - id: r3
+            uri: lb://CONFIG-SERVICE
+            predicates:
+              - Path=/CONFIG-SERVICE/**
+            filters:
+              - StripPrefix=1
 
